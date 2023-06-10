@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from "react";
+import CurrentlyRead from './CurrentlyRead';
+import WantToRead from './WantToRead';
+import Read from './Read';
+import { SearchBar } from './SearchBar';
+import { SearchResultsList } from './SearchResultList';
+
+
 
 function App() {
+  const [results, setResults] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <h1 className='headline'>My Reads</h1>
+    <SearchBar setResults={setResults} />
+    {results && results.length > 0 && <SearchResultsList results={results} />}
+    <CurrentlyRead />
+    <WantToRead />
+    <Read />
+
+    </>
   );
 }
 
