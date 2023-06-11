@@ -20,9 +20,9 @@ const Read = () => {
   }, [])
 
   return (
-    <div className="d-flex justify-content-center">
+    <div>
         <h1>Read</h1>
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", alignItems:"center" ,gap:"100px" , justifyContent:"center" }}>
           {users.slice(13,15).map(user => (
             <div key={user.id}>
               <div>

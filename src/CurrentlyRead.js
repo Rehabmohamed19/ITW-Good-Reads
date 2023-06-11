@@ -22,7 +22,7 @@ const CurrentlyRead = () => {
   return (
     <div>
       <h1>Currently Reading</h1>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", flexWrap: "wrap", alignItems:"center" ,gap:"100px" , justifyContent:"center" }}>
 
         {users.slice(10, 13).map(user => (
           <div key={user.id} >

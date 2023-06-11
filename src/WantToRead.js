@@ -22,7 +22,7 @@ const WantToRead = () => {
   return (
     <div>
       <h1>Want To Read</h1>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", flexWrap: "wrap", alignItems:"center" ,gap:"100px" , justifyContent:"center" }}>
         {users.slice(5, 8).map(user => (
           <div key={user.id} >
             <img key={user.id} src={user.url} width="100px" height="100px" />
